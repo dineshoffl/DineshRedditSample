@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shade"
+    tools:context=".activity.MainActivity">
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/container"
+            android:layout_above="@+id/bottomNavigationView"
+            android:layout_marginBottom="8dp"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+
+
+    <com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu"
+        app:backgroundTint="@color/colorPrimary"
+        app:morphCornerRadius="128dp"
+        app:morphItemRadius="64dp"
+        app:morphVerticalOffset="8dp"
+        style="@style/BottomNavigationView"
+        />
+
+
+</RelativeLayout>

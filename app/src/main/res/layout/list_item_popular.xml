@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="15dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:padding="14dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:id="@+id/img_icon"
+                        android:src="@mipmap/reddit"
+                        android:layout_height="50dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/img_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_14sdp"
+                        android:layout_toLeftOf="@+id/fav"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/tv_author"
+                            style="@style/boldfontstyle"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/tv_postby"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            style="@style/lightfontstyle"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/tv_awards"
+                            style="@style/lightfontstyle"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Add to Fav"
+                        android:id="@+id/fav"
+                        style="@style/boldfontstyle"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/content_title"
+                    android:padding="14dp"
+                    android:visibility="gone"
+                    style="@style/boldfontstyle"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/content"
+                    android:visibility="gone"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    style="@style/lightfontstyle"
+                    android:padding="14dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/data"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <com.dineshredditsample.customrecycle.AAH_VideoImage
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/img_playback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|bottom"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/pause"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/img_vol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/volume"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

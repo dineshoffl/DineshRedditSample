@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DineshRedditSample</string>
+    <string name="please_wait">Please wait</string>
+    <string name="no_net">No internet connection</string>
+    <string name="no_data_found">No data found</string>
+    <string name="server_error">Server Error</string>
+</resources>
